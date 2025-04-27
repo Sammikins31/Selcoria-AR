@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>code-test</title>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
-  </head>
-  <body>
 
-    <!-- WORKS! -->
-    <!-- ※1 a-scene に mindar-image 属性を追加しマーカーファイル（.mindファイル）のパスを記載-->
-    <a-scene mindar-image="imageTargetSrc: ./assets/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <!-- ※2 mindar-image-target 属性をつけることでマーカーと対応するentityを作れる -->
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-box></a-box>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code-test</title>
+  <!-- AR Frame -->
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+
+  <!-- Three.js and GSAP Libraries -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene mindar-image="imageTargetSrc: ./assets/targets.mind;" color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <!-- image target -->
+    <a-entity mindar-image-target="targetIndex: 0" id="imageTarget">
+
+      <a-entity id="transition-container" mindar-image-target-anchor="true" position="0 0 0" scale="1 1 1">
       </a-entity>
-    </a-scene>
-  </body>
+    </a-entity>
+
+  </a-scene>
+
+<div id="scanning-guide-container">
+  <img src="https://sm-artist.co.uk/wp-content/uploads/2025/03/tile-mural1-scaled.jpg" id="scanning-guide">
+</div>
+
+<div id="scanning-text">
+  Scan this artwork
+</div>
+
+<div id="top-text">
+  Selcoria
+</div>
+
+  <div id="bottom-text">
+    Swipe Left on the slides to navigate
+  </div>
+
+  <div id="artist-text">
+    Created by Samantha Mharie <br>
+    www.sm-artist.co.uk
+  </div>
+  
+
+</body>
+
 </html>

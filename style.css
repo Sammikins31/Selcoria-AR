@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+
+#transition-container canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor
+}
+
+
+#transition-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease; 
+    z-index: 10;
+}
+
+#transition-container img {
+    object-fit: contain; 
+    width: 100%; 
+    height: 100%;
+}
+#top-text {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-family: Georgia, serif;
+    text-align: center;
+    display: block;
+  }
+
+#bottom-text {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-family: Georgia, serif;
+    text-align: center;
+    display: none;
+  }
+  #scanning-guide-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+#scanning-guide {
+    width: 200px;
+    height: auto;
+    opacity: 0.8;
+}
+
+#scanning-text {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-family: Georgia, serif;
+    text-align: center;
+    display: block;
+  }
+  #scanning-text.visible {
+    display: block;
+  }
+  #scanning.text.hidden{
+    display: none;
+  }
+  #bottom-text.visible{
+    display: block;
+  }
+
+  #artist-text {
+    position: fixed;
+    bottom: 10px;
+    left: 30%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 13px;
+    font-family: Georgia, serif;
+    text-align: left;
+    display: inline-block;
+  }
+  
