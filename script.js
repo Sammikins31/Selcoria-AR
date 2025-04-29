@@ -228,7 +228,7 @@ function loadMediaOnSlide(slide, url) {
 function reverseVideo(video) {
     // Set the video playback rate to a negative value
     video.playbackRate = -1;
-    video.currentTime = video.duration;  // Start from the end
+    video.currentTime = video.duration;  
 
     // Play video in reverse
     video.play().catch(error => console.error("video reverse playback failed:", error));
@@ -236,8 +236,7 @@ function reverseVideo(video) {
     // Listen for when reverse playback finishes to loop the behavior or trigger next action
     video.onended = () => {
         console.log("Video reversed, now looping...");
-        video.playbackRate = 1; // Reset playback rate for forward play
-        // You can loop here or trigger any further behavior
+        video.playbackRate = 1; 
     };
 }
 
