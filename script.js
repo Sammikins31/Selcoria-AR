@@ -1,9 +1,9 @@
 // Declare global variable for timeline instance
 var tl;
 
-// Define custom dimensions for the renderer
-const customWidth = 500;
-const customHeight = 400;
+// Define dimensions for the renderer
+const Width = 500;
+const Height = 400;
 
 // Handle DOM content loading
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,27 +93,27 @@ function init() {
     root.camera.position.set(0, 0, 60);
 
     // Dimensions for slides
-    var width1 = 69;
-    var height1 = 98;
-    var width2 = 69;
-    var height2 = 98;
-
+    var width = 69;
+    var height = 98;
+  
     // Create slide objects with animation phases
-    var slide = new Slide(width1, height1, 'out');
-    var slide2 = new Slide(width2, height2, 'in');
-    var slide3 = new Slide(width2, height2, 'in');
-    var slide4 = new Slide(width2, height2, 'in');
-    var slide5 = new Slide(width2, height2, 'in');
-    var slide6 = new Slide(width2, height2, 'in');
-    var slide7 = new Slide(width2, height2, 'in');
-    var slide8 = new Slide(width2, height2, 'in');
-    var slide9 = new Slide(width2, height2, 'in');
-    var slide10 = new Slide(width2, height2, 'in');
+    var slide = new Slide(width, height, 'out');
+    var slide2 = new Slide(width, height, 'in');
+    var slide3 = new Slide(width, height, 'in');
+    var slide4 = new Slide(width, height, 'in');
+    var slide5 = new Slide(width, height, 'in');
+    var slide6 = new Slide(width, height, 'in');
+    var slide7 = new Slide(width, height, 'in');
+    var slide8 = new Slide(width, height, 'in');
+    var slide9 = new Slide(width, height, 'in');
+    var slide10 = new Slide(width, height, 'in');
+    var slide11 = new Slide(width, height, 'in');
+
 
     // Array of slides with media URLs
     const slides = [
-        { slide, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/03/tile-mural1-scaled.jpg' },
-        { slide: slide2, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/tarsier-vid.mp4', image: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/FINAL-PF-tarsier-01-01-scaled.jpg' },
+        { slide, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/Selcoria-Mural-scaled.jpg' },
+        { slide: slide2, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/tarsier-vid.mp4' },
         { slide: slide3, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/clipfly-ai-20250426182035.mp4' },
         { slide: slide4, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/peafowl-vid.mp4' },
         { slide: slide5, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/turtle-vid.mp4' },
@@ -121,7 +121,9 @@ function init() {
         { slide: slide7, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/masked-civet-vid.mp4' },
         { slide: slide8, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/carabao-vid.mp4' },
         { slide: slide9, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/croc-vid.mp4' },
-        { slide: slide10, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/heron-vid.mp4' }
+        { slide: slide10, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/heron-vid.mp4' },
+        { slide: slide11, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/ar-ending-01-scaled.jpg' }
+
     ];
 
     // Load media onto slides and add to scene
@@ -144,6 +146,7 @@ function init() {
     tl.add(slide8.transition(), 52.0);
     tl.add(slide9.transition(), 60.0);
     tl.add(slide10.transition(), 68.0);
+    tl.add(slide11.transition(), 74.0);
 
     // Restart timeline after completing a loop
     tl.add(() => {
@@ -463,7 +466,7 @@ function THREERoot(params) {
         alpha: true
     });
 
-    this.renderer.setSize(customWidth, customHeight);
+    this.renderer.setSize(Width, Height);
     this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
 
     const container = document.querySelector('#transition-container');
