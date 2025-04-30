@@ -114,7 +114,7 @@ function init() {
     const slides = [
         { slide, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/Selcoria-Mural-scaled.jpg' },
         { slide: slide2, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/tarsier-vid.mp4' },
-        { slide: slide3, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/clipfly-ai-20250426182035.mp4' },
+        { slide: slide3, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/rhesus-vid-1.mp4' },
         { slide: slide4, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/peafowl-vid.mp4' },
         { slide: slide5, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/turtle-vid.mp4' },
         { slide: slide6, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/asian-civet-vid.mp4' },
@@ -122,8 +122,7 @@ function init() {
         { slide: slide8, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/carabao-vid.mp4' },
         { slide: slide9, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/croc-vid.mp4' },
         { slide: slide10, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/heron-vid.mp4' },
-        { slide: slide11, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/ar-ending-01-scaled.jpg' }
-
+        { slide: slide11, url: 'https://sm-artist.co.uk/wp-content/uploads/2025/04/ar-ending-01-scaled.jpg'}
     ];
 
     // Load media onto slides and add to scene
